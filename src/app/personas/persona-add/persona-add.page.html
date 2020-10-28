@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/personas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+  Agredar persona 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          
+    <label class="label">Nombre </label>
+          <ion-input placeholder="Nombre" type="text" #title></ion-input>
+          <br>
+          <label class="label">Imagen </label>
+          <ion-input placeholder="http://imagewebsite.com" #imageURL></ion-input>
+    <br>
+
+    <label class="label">Bibliografia </label>
+    <ion-input placeholder="Descripcion" type="text" #descripcion></ion-input>
+    <br>
+          <ion-button class="ion-text-center" color="primary" (click)="saveNewPersona(title, imageURL, descripcion)">
+            Guardar
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
